@@ -6,6 +6,7 @@ import { cn } from '../lib/utils';
 import { sitePath } from '../lib/routes';
 import { FileViewer, type DownloadFile } from './FileViewer';
 import { DownloadSection } from './DownloadSection';
+import { CustomAiWriteSection } from './CustomAiWriteSection';
 
 type CustomDetailData = {
   id: string;
@@ -165,6 +166,7 @@ export function CustomDetailApp({ customId, customData, lang = 'zh' }: { customI
 
             {/* Sidebar */}
             <div className="space-y-6">
+              <CustomAiWriteSection customData={customData} lang={currentLang} />
               <DownloadSection files={customData.downloadFiles} packageName={packageName} lang={currentLang} />
             </div>
           </div>

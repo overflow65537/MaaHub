@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "dev": "cd website && yarn && astro dev",
-    "build": "cd website && yarn && astro build",
-    "preview": "cd website && yarn && astro preview",
-    "astro": "cd website && yarn && astro",
+    "dev": "cd website & yarn && astro dev",
+    "build": "cd website & yarn && astro build",
+    "preview": "cd website & yarn && astro preview",
+    "astro": "cd website & yarn && astro",
     "validate:meta": "node scripts/validate-maahub-meta.mjs"
   }
 }
