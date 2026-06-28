@@ -1,0 +1,23 @@
+{
+  "id": "overflow65537/pipeline-override-expected-threshold",
+  "title": "thresholds.size() != expected.size()：override 改列表长度时的修复",
+  "description": "pipeline_override 改变 expected、template 等列表长度时，threshold 仍继承原节点导致校验失败；适用于 NeuralNetworkDetect、TemplateMatch、OCR 等带 threshold 的识别。",
+  "author": "overflow65537",
+  "source": "MaaHub",
+  "sourceGithub": "https://github.com/MaaXYZ/MaaHub",
+  "tags": ["pipeline", "pipeline_override", "threshold", "pitfall", "troubleshooting"],
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "version": "0.3.0",
+  "mfwVersion": "5.10.4",
+  "entry": "index.md",
+  "readme": "./index.md",
+  "chapters": [
+    { "title": "报错排查与修复", "path": "index.md" }
+  ],
+  "status": "stable",
+  "type": "experience",
+  "category": "pipeline",
+  "difficulty": "beginner",
+  "estimatedTime": "5min"
+}
