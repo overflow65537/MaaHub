@@ -1,0 +1,67 @@
+{
+    "OCR-当前数值": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [100, 200, 80, 40],
+                "expected": "^\\d*$",
+                "only_rec": true
+            }
+        }
+    },
+    "OCR-目标数值": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [100, 100, 80, 40],
+                "expected": "^\\d*$",
+                "only_rec": true
+            }
+        }
+    },
+    "OCR-倍率A": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [200, 200, 60, 40],
+                "expected": "^\\d*$",
+                "only_rec": true
+            }
+        }
+    },
+    "OCR-倍率B": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [200, 260, 60, 40],
+                "expected": "^\\d*$",
+                "only_rec": true
+            }
+        }
+    },
+    "数值达标判断": {
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "ExpressionRecognition",
+                "custom_recognition_param": {
+                    "expression": "{OCR-当前数值}>={OCR-目标数值}"
+                }
+            }
+        },
+        "next": ["下一步节点"]
+    },
+    "加权分数计算": {
+        "recognition": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "ExpressionRecognition",
+                "custom_recognition_param": {
+                    "expression": "{OCR-当前数值}*{OCR-倍率A}+{OCR-目标数值}*{OCR-倍率B}>={OCR-目标数值}"
+                }
+            }
+        },
+        "next": ["下一步节点"]
+    },
+    "下一步节点": {}
+}
