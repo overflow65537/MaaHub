@@ -1,0 +1,20 @@
+{
+  "id": "overflow65537/expression-recognition",
+  "title": "ExpressionRecognition 表达式识别",
+  "description": "自定义识别：引用其他 pipeline 节点的 OCR 数值，通过表达式做算术与逻辑比较，判断是否命中。",
+  "author": "overflow65537",
+  "source": "MAA_Punish",
+  "sourceGithub": "https://github.com/overflow65537/MaaHub",
+  "tags": ["custom", "recognition", "expression", "ocr", "python"],
+  "createdAt": "2026-06-28",
+  "updatedAt": "2026-06-28",
+  "version": "0.1.0",
+  "mfwVersion": "5.10.4",
+  "entry": "ExpressionRecognition.py",
+  "readme": "./README.md",
+  "status": "stable",
+  "type": "custom",
+  "language": "python",
+  "runtime": "python 3.12",
+  "dependencies": ["maa framework sdk"]
+}
