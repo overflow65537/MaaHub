@@ -4,6 +4,7 @@ import json
 import re
 from typing import Any
 
+from maa.agent.agent_server import AgentServer
 from maa.custom_recognition import CustomRecognition
 from maa.define import OCRResult
 
@@ -19,6 +20,7 @@ class NodeResolutionError(ValueError):
         self.payload = payload
 
 
+@AgentServer.custom_recognition("ExpressionRecognition")
 class ExpressionRecognition(CustomRecognition):
 
     def analyze(
